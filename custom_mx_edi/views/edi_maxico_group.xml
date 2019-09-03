@@ -2,12 +2,12 @@
 <odoo>
     <data>
           <record id="module_category_mx_edi" model="ir.module.category">
-            <field name="name">Maxico Rights</field>
+            <field name="name">Mexico Rights</field>
             <field name="sequence">105</field>
         </record>
 
         <record model="res.groups" id="group_max_edi_manager">
-            <field name="name">All : Maxico User</field>
+            <field name="name">All : Mexico User</field>
             <field name="category_id" ref="module_category_mx_edi"/>
         </record>
     </data>
