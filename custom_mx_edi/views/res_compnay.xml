@@ -11,19 +11,5 @@
                 </xpath>
             </field>
         </record>
-
-        <record model="ir.ui.view" id="customer_res_partner_inherit_form">
-            <field name="name">res.partner.form</field>
-            <field name="model">res.partner</field>
-            <field name="inherit_id" ref="base.view_partner_form"/>
-            <field name="arch" type="xml">
-                <xpath expr="//field[@name='vat']" position="after">
-                    <field name="is_show" invisible="1"/>
-                </xpath>
-                <xpath expr="//field[@name='street_number']" position="attributes">
-                    <attribute name="attrs">{'invisible': [('is_show','=',True)]}</attribute>
-                </xpath>
-            </field>
-        </record>
     </data>
 </odoo>

@@ -18,3 +18,11 @@ class res_parner(models.Model):
         for record in self:
             record.is_show = self.env.user.company_id.group_hide_field
         
+class ProductTemplate(models.Model):
+    _inherit = 'product.template'
+
+    is_show = fields.Boolean('Show Field', compute='_compute_field')
+
+    def _compute_field(self):
+        for record in self:
+            record.is_show = self.env.user.company_id.group_hide_field

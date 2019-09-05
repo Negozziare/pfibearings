@@ -10,7 +10,8 @@
             <data>
                 <xpath expr="//page[@name='invoicing']" position="inside">
                     <group string="CFDI" groups="custom_mx_edi.group_max_edi_manager">
-                        <field name="l10n_mx_edi_code_sat_id" options='{"no_create": True}'  groups="custom_mx_edi.group_max_edi_manager"/>
+                        <field name="is_show" invisible="1"/>
+                        <field name="l10n_mx_edi_code_sat_id" options='{"no_create": True}' attrs="{'invisible': [('is_show','=',False)]}"/>
                     </group>
                 </xpath>
             </data>
@@ -27,13 +28,14 @@
                     <field name="parent_id" invisible="1"/>
                     <field name="type" invisible="1"/>
                     <field name="street" invisible="1"/>
-                    <field name="street_name" placeholder="Street Name..." attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}"/>
-                    <div class="o_row" groups="custom_mx_edi.group_max_edi_manager">
-                        <label for="street_number" class="oe_edit_only"/>
+                    <field name="is_show" invisible="1"/>
+                    <field name="street_name" placeholder="Street Name" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)], 'invisible': [('is_show','=',False)]}"/>
+                    <div class="o_row">
+                        <label for="street_number" class="oe_edit_only" attrs="{'invisible': [('is_show','=',False)]}"/>
                         <span> </span>
-                        <field name="street_number" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}" groups="custom_mx_edi.group_max_edi_manager"/>
-                        <label for="street_number2"/>
-                        <field name="street_number2" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}" groups="custom_mx_edi.group_max_edi_manager"/>
+                        <field name="street_number" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)], 'invisible': [('is_show','=',False)]}"/>
+                        <label for="street_number2" attrs="{'invisible': [('is_show','=',False)]}"/>
+                        <field name="street_number2" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)],'invisible': [('is_show','=',False)]}"/>
                     </div>
                     <field name="street2" invisible="1"/>
                     <field name="l10n_mx_edi_colony" placeholder="Colony..." groups="custom_mx_edi.group_max_edi_manager"/>
