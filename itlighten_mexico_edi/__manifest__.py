@@ -9,7 +9,7 @@
     'description': """
     """,
     'category': 'COA of Mexico',
-    'depends': ['l10n_mx_edi'],
+    'depends': ['base_address_extended','l10n_mx_edi'],
     'data': [
         'views/inherit_res_partner_view.xml',
         'views/inherit_res_company_view.xml',
