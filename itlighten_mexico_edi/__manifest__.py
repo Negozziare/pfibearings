@@ -12,6 +12,8 @@
     'depends': ['l10n_mx_edi'],
     'data': [
         'views/inherit_res_partner_view.xml',
+        'views/inherit_res_company_view.xml',
+        'views/inherit_product_view.xml',
     ],
     'demo': [
     ],
