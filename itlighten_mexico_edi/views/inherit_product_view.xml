@@ -9,7 +9,7 @@
             <field name="arch" type="xml">
             <data>
                 <xpath expr="//page[@name='invoicing']" position="inside">
-                    <group string="CFDI" groups="custom_mx_edi.group_max_edi_manager">
+                    <group string="CFDI">
                         <field name="is_show" invisible="1"/>
                         <field name="l10n_mx_edi_code_sat_id" options='{"no_create": True}' attrs="{'invisible': [('is_show','=',False)]}"/>
                     </group>

@@ -9,6 +9,7 @@
                 <form>
                     <div class="o_address_format">
                         <field name="parent_id" invisible="1"/>
+                        <field name="check_mexican" invisible="1"/>
                         <field name="type" invisible="1"/>
                         <field name="street" invisible="1"/>
                         <field name="street_name" placeholder="Street Name..."
@@ -30,13 +31,12 @@
                         <field name="zip" placeholder="ZIP" class="o_address_zip"/>
                         <field name="country_id" placeholder="Country" class="o_address_country"
                                options='{"no_open": True, "no_create": True}'/>
-                        <field name="check_mexican" invisible="1"/>
                     </div>
                 </form>
             </field>
         </record>
 
-        <record id="base_address_extended.view_partner_structured_form" model="ir.ui.view">
+        <!--record id="base_address_extended.view_partner_structured_form" model="ir.ui.view">
             <field name="name">view_partner_structured_form</field>
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_form"/>
@@ -56,7 +56,7 @@
                     </div>
                 </xpath>
             </field>
-        </record>
+        </record-->
 
 
     </data>
